@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         useMaterial3: true,
-        scaffoldBackgroundColor: AppColors.pickupGreen,
+        scaffoldBackgroundColor: const Color(0xFFAFCB86),
         textTheme: GoogleFonts.jostTextTheme(),
         fontFamily: GoogleFonts.jost().fontFamily,
         inputDecorationTheme: InputDecorationTheme(

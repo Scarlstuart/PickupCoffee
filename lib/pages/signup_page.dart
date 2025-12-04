@@ -64,7 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.pickupGreen,
+      backgroundColor: const Color(0xFFAFCB86),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -84,7 +84,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(height: 20),
                 // Logo Image
                 Image.asset(
-                  'assets/green.png',
+                  'assets/logo.png',
                   width: 280,
                   height: 200,
                   fit: BoxFit.contain,
@@ -232,7 +232,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           width: 20,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
-                            valueColor: const AlwaysStoppedAnimation<Color>(AppColors.pickupWhite),
+                            valueColor: AlwaysStoppedAnimation<Color>(AppColors.pickupGrey),
                           ),
                         )
                       : const Text(

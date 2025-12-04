@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.pickupGreen,
+      backgroundColor: const Color(0xFFAFCB86),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 60),
                 // Logo Image
                 Image.asset(
-                  'assets/green.png',
+                  'assets/logo.png',
                   width: 280,
                   height: 200,
                   fit: BoxFit.contain,
@@ -172,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                           width: 20,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
-                            valueColor: const AlwaysStoppedAnimation<Color>(AppColors.pickupWhite),
+                            valueColor: AlwaysStoppedAnimation<Color>(AppColors.pickupGrey),
                           ),
                         )
                       : const Text(

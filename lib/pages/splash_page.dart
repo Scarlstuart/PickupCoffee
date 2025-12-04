@@ -73,7 +73,7 @@ class _SplashPageState extends State<SplashPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.pickupGreen,
+      backgroundColor: const Color(0xFFAFCB86),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -87,10 +87,17 @@ class _SplashPageState extends State<SplashPage>
                   child: ScaleTransition(
                     scale: _scaleAnimation,
                     child: Image.asset(
-                      'assets/green.png',
-                      width: 350,
-                      height: 250,
+                      'assets/logo.png',
+                      width: 300,
+                      height: 200,
                       fit: BoxFit.contain,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(
+                          Icons.image_not_supported,
+                          size: 100,
+                          color: Colors.white,
+                        );
+                      },
                     ),
                   ),
                 );
@@ -103,7 +110,7 @@ class _SplashPageState extends State<SplashPage>
               height: 50,
               child: CircularProgressIndicator(
                 strokeWidth: 4,
-                valueColor: AlwaysStoppedAnimation<Color>(AppColors.pickupWhite),
+                valueColor: AlwaysStoppedAnimation<Color>(AppColors.pickupGrey),
               ),
             ),
           ],

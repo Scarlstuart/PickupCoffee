@@ -202,9 +202,11 @@ class _ScannerPageState extends State<ScannerPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircularProgressIndicator(),
-            SizedBox(height: 16),
-            Text('Initializing camera...'),
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(AppColors.pickupGrey),
+            ),
+            const SizedBox(height: 16),
+            const Text('Initializing camera...'),
           ],
         ),
       );
